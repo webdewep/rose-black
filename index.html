@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Дмитрий & Анна — 14.09.2026">
+  <meta property="og:description" content="Мы начинаем новую главу и с радостью приглашаем вас разделить с нами этот особенный вечер.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-wedding-site.ru">
+  <meta property="og:image" content="https://your-wedding-site.ru/img/og-postcard.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+
+  <!-- Telegram / Twitter / VK -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Дмитрий & Анна — 14.09.2026">
+  <meta name="twitter:description" content="Мы начинаем новую главу и приглашаем вас провести этот вечер вместе с нами.">
+  <meta name="twitter:image" content="https://your-wedding-site.ru/img/og-postcard.jpg">
+
+  <title>Приглашение на свадьбу — Дмитрий & Анна</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;0,700;1,400&family=Great+Vibes&family=Manrope:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Manrope', 'sans-serif'],
+            serif: ['Cormorant Garamond', 'serif'],
+            script: ['Great Vibes', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: #f5f5f7;
+    }
+    .gold-border {
+      border: 1px solid rgba(197, 168, 128, 0.25);
+    }
+    .gold-text {
+      color: #c5a880;
+    }
+
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0c0c0c;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #c5a880;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden relative min-h-screen">
+
+<!-- СЛОЙ 3D-РОЗ (ЗАДНИЙ ПЛАН) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-10">
+  <!-- верхняя часть -->
+  <img src="img/rose.webp" class="rose-float absolute w-40 md:w-56 opacity-40" style="top: 2%; left: 5%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-40 md:w-56 opacity-40" style="top: 8%; left: 50%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-40 md:w-56 opacity-40" style="top: 5%; left: 30%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-28 md:w-36 opacity-30" style="top: 15%; right: 8%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-40 md:w-56 opacity-40" style="top: 18%; left: 5%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-16 md:w-20 opacity-40" style="top: 28%; left: 12%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-40 md:w-56 opacity-40" style="top: 25%; left: 32%;" alt="" loading="lazy">
+
+  <!-- добавленные розы в середине (задний план) -->
+  <img src="img/rose.webp" class="rose-float absolute w-32 md:w-44 opacity-35" style="top: 45%; left: 20%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-28 md:w-40 opacity-30" style="top: 50%; right: 18%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-24 md:w-36 opacity-25" style="top: 55%; left: 55%;" alt="" loading="lazy">
+
+  <!-- нижняя часть (существующие + добавленные) -->
+  <img src="img/rose.webp" class="rose-float absolute w-36 md:w-44 opacity-30" style="top: 40%; right: 4%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-44 md:w-52 opacity-35" style="top: 55%; left: -5%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-12 md:w-16 opacity-45" style="top: 70%; right: 15%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-32 md:w-40 opacity-30" style="top: 85%; left: 8%;" alt="" loading="lazy">
+
+  <!-- дополнительные розы ближе к низу (задний план) -->
+  <img src="img/rose.webp" class="rose-float absolute w-36 md:w-48 opacity-40" style="top: 75%; left: 35%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-30 md:w-44 opacity-35" style="top: 82%; right: 10%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-20 md:w-32 opacity-30" style="top: 90%; left: 20%;" alt="" loading="lazy">
+</div>
+
+<!-- СЛОЙ 3D-РОЗ (ПЕРЕДНИЙ ПЛАН) -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden z-10">
+  <!-- верхняя часть -->
+  <img src="img/rose.webp" class="rose-float absolute w-32 md:w-48 opacity-60" style="top: 8%; right: -5%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-32 md:w-48 opacity-60" style="top: 10%; right: 30%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-48 md:w-64 opacity-55" style="top: 22%; left: 75%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-24 md:w-32 opacity-50" style="top: 34%; left: -2%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-16 md:w-24 opacity-60" style="top: 48%; left: 80%;" alt="" loading="lazy">
+
+  <!-- добавленные розы в середине (передний план) -->
+  <img src="img/rose.webp" class="rose-float absolute w-28 md:w-40 opacity-55" style="top: 52%; left: 10%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-24 md:w-36 opacity-50" style="top: 58%; right: 25%;" alt="" loading="lazy">
+
+  <!-- нижняя часть (существующие + добавленные) -->
+  <img src="img/rose.webp" class="rose-float absolute w-36 md:w-48 opacity-50" style="top: 65%; left: 3%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-40 md:w-56 opacity-55" style="top: 78%; right: -8%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-14 md:w-18 opacity-10" style="top: 92%; left: 20%;" alt="" loading="lazy">
+
+  <!-- дополнительные розы ближе к низу (передний план) -->
+  <img src="img/rose.webp" class="rose-float absolute w-30 md:w-42 opacity-15" style="top: 80%; left: 55%;" alt="" loading="lazy">
+  <img src="img/rose.webp" class="rose-float absolute w-22 md:w-32 opacity-10" style="top: 88%; right: 5%;" alt="" loading="lazy">
+</div>
+
+  <!-- ОСНОВНОЙ КОНТЕНТ -->
+  <div class="relative z-20 max-w-2xl mx-auto px-6 py-20 flex flex-col items-center space-y-12">
+
+    <!-- Главный экран -->
+    <section class="text-center py-12">
+      <h1 class="sr-only">Приглашение на свадьбу — Дмитрий и Анна</h1>
+
+      <div class="font-script text-6xl md:text-8xl gold-text mb-4">Дмитрий</div>
+      <div class="font-serif text-2xl uppercase tracking-[0.3em] text-white/50 my-2">&</div>
+      <div class="font-script text-6xl md:text-8xl gold-text mb-6">Анна</div>
+      <div class="font-serif text-3xl tracking-[0.2em] font-light">14.09.2026</div>
+    </section>
+
+    <!-- ТАЙМЕР -->
+    <div id="countdown-container" class="w-full gold-border bg-black/60 backdrop-blur-md rounded-2xl p-8 text-center shadow-2xl">
+      <div class="text-xs uppercase tracking-widest text-white/40 mb-4">До нашего дня осталось</div>
+      <div class="flex justify-center gap-4 sm:gap-6 font-serif text-3xl gold-text">
+        <div>
+          <span id="days">00</span>
+          <div class="text-[10px] uppercase tracking-wider text-white/40 mt-1">Дней</div>
+        </div>
+        <div>
+          <span id="hours">00</span>
+          <div class="text-[10px] uppercase tracking-wider text-white/40 mt-1">Часов</div>
+        </div>
+        <div>
+          <span id="minutes">00</span>
+          <div class="text-[10px] uppercase tracking-wider text-white/40 mt-1">Минут</div>
+        </div>
+        <div>
+          <span id="seconds">00</span>
+          <div class="text-[10px] uppercase tracking-wider text-white/40 mt-1">Секунд</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Приглашение -->
+    <section class="w-full gold-border bg-black/60 backdrop-blur-md rounded-2xl p-8 md:p-12 text-center shadow-2xl">
+      <h2 class="font-serif text-2xl md:text-3xl tracking-[0.15em] uppercase gold-text mb-6 leading-tight">
+        Мы говорим<br>«да» друг другу
+      </h2>
+      <p class="text-white/70 text-sm md:text-base leading-relaxed font-light mb-6">
+        Этот день мы давно представляли в мыслях и сердцем, и теперь он становится реальностью.
+        Мы хотим, чтобы рядом были самые важные для нас люди — вы.
+        С радостью приглашаем вас разделить с нами наш свадебный вечер, который состоится:
+      </p>
+      <div class="font-serif text-xl tracking-wider gold-text uppercase">14 сентября 2026</div>
+    </section>
+
+    <!-- Место проведения -->
+    <section class="w-full gold-border bg-black/60 backdrop-blur-md rounded-2xl p-8 md:p-12 text-center shadow-2xl">
+      <h2 class="font-serif text-xl md:text-2xl tracking-[0.2em] uppercase gold-text mb-6">Место встречи</h2>
+      <div class="space-y-2">
+        <div class="font-serif text-lg tracking-widest uppercase">LOFT TERRACE</div>
+        <p class="text-white/60 text-sm font-light">
+          наб. реки Которосль, 24,<br>г. Ярославль
+        </p>
+      </div>
+    </section>
+
+    <!-- План мероприятия -->
+    <section class="w-full gold-border bg-black/60 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl">
+      <h2 class="font-serif text-xl md:text-2xl tracking-[0.2ем] uppercase gold-text mb-8 text-center">План вечера</h2>
+      <div class="space-y-8 max-w-sm mx-auto">
+        <div class="flex justify-between items-start border-b border-white/10 pb-4">
+          <div class="font-serif text-lg tracking-wider gold-text">15:30</div>
+          <div class="text-right">
+            <div class="font-serif text-sm uppercase tracking-widest mb-1">WELCOME-ЗОНА</div>
+            <div class="text-xs text-white/40">лёгкие закуски и бокал игристого</div>
+          </div>
+        </div>
+        <div class="flex justify-between items-start border-b border-white/10 pb-4">
+          <div class="font-serif text-lg tracking-wider gold-text">16:00</div>
+          <div class="text-right">
+            <div class="font-serif text-sm uppercase tracking-widest mb-1">ЦЕРЕМОНИЯ</div>
+            <div class="text-xs text-white/40">обмен кольцами и клятвами</div>
+          </div>
+        </div>
+        <div class="flex justify-between items-start">
+          <div class="font-serif text-lg tracking-wider gold-text">17:30</div>
+          <div class="text-right">
+            <div class="font-serif text-sm uppercase tracking-widest mb-1">БАНКЕТ</div>
+            <div class="text-xs text-white/40">начало праздничного вечера</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Дресс-код -->
+    <section class="w-full gold-border bg-black/60 backdrop-blur-md rounded-2xl p-8 md:p-12 text-center shadow-2xl">
+      <h2 class="font-serif text-xl md:text-2xl tracking-[0.2em] uppercase gold-text mb-6">Дресс-код</h2>
+
+      <div class="flex justify-center gap-4 mb-8">
+        <div class="w-10 h-10 rounded-full bg-[#111] border border-white/20 shadow-md"></div>
+        <div class="w-10 h-10 rounded-full bg-[#50000a] border border-white/20 shadow-md"></div>
+      </div>
+
+      <p class="text-white/70 text-sm leading-relaxed font-light max-w-md mx-auto">
+        Мы мечтаем о красивом и атмосферном вечере, поэтому будем благодарны, если вы поддержите общий стиль праздника.<br><br>
+        Для девушек — коктейльные или вечерние платья в тёмных оттенках, аккуратные украшения и любимые туфли.<br>
+        Для мужчин — классические костюмы или смарт‑кэжуал в благородных тонах.
+      </p>
+    </section>
+
+    <!-- Анкета гостя -->
+    <section class="w-full gold-border bg-black/40 backdrop-blur-md rounded-2xl p-8 md:p-12 shadow-2xl" id="form">
+      <h2 class="font-serif text-xl md:text-2xl tracking-[0.2em] uppercase gold-text mb-2 text-center">Анкета гостя</h2>
+      <p class="text-xs uppercase tracking-widest text-center text-white/40 mb-8">Пожалуйста, ответьте до 01.09</p>
+
+      <form action="https://formspree.io/f/ВАШ_ID_ФОРМЫ_ЗДЕСЬ" method="POST" class="space-y-6 max-w-md mx-auto text-sm font-light">
+        <input type="hidden" name="_redirect" value="https://your-wedding-site.ru/#form">
+
+        <!-- Имя и Фамилия -->
+        <div class="flex flex-col gap-2">
+          <label class="text-white/60 text-xs uppercase tracking-wider">Ваше Имя и Фамилия</label>
+          <input
+            type="text"
+            name="name"
+            required
+            placeholder="Екатерина Петрова"
+            class="w-full px-4 py-3 bg-white/5 gold-border rounded-xl focus:outline-none focus:border-[#c5a880] transition-colors text-white placeholder-white/20"
+          >
+        </div>
+
+        <!-- Присутствие -->
+        <div class="flex flex-col gap-3">
+          <label class="text-white/60 text-xs uppercase tracking-wider">Ваше присутствие</label>
+          <div class="space-y-2">
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="radio" name="attendance" value="yes" required class="accent-[#c5a880]">
+              <span>Да, я обязательно приеду</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="radio" name="attendance" value="with_partner" class="accent-[#c5a880]">
+              <span>Приду с парой</span>
+            </label>
+            <label class="flex items-center gap-3 cursor-pointer">
+              <input type="radio" name="attendance" value="no" class="accent-[#c5a880]">
+              <span>Не смогу быть с вами</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Дополнительные поля -->
+        <div id="optional-fields" class="space-y-6 transition-all duration-100 overflow-hidden">
+          <!-- Имя пары -->
+          <div class="flex flex-col gap-2" id="partner-field">
+            <label class="text-white/60 text-xs uppercase tracking-wider">Имя и Фамилия вашей пары</label>
+            <input
+              type="text"
+              name="partner_name"
+              placeholder="Алексей Смирнов"
+              class="w-full px-4 py-3 bg-white/5 gold-border rounded-xl focus:outline-none focus:border-[#c5a880] transition-colors text-white placeholder-white/20"
+            >
+          </div>
+
+          <!-- Дети -->
+          <div class="flex flex-col gap-2">
+            <label class="text-white/60 text-xs uppercase tracking-wider">Будут ли с вами дети?</label>
+            <input
+              type="text"
+              name="children"
+              placeholder="Да, 2 ребёнка (7 и 10 лет)"
+              class="w-full px-4 py-3 bg-white/5 gold-border rounded-xl focus:outline-none focus:border-[#c5a880] transition-colors text-white placeholder-white/20"
+            >
+          </div>
+
+          <!-- Предпочтения в алкоголе -->
+          <div class="flex flex-col gap-3">
+            <label class="text-white/60 text-xs uppercase tracking-wider">
+              Ваши предпочтения:
+            </label>
+            <div class="grid grid-cols-1 gap-2">
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Красное сухое вино" class="accent-[#c5a880]">
+                <span>Красное сухое вино</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Красное п/сл вино" class="accent-[#c5a880]">
+                <span>Красное п/сл вино</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Белое сухое вино" class="accent-[#c5a880]">
+                <span>Белое сухое вино</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Белое п/сл вино" class="accent-[#c5a880]">
+                <span>Белое п/сл вино</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Шампанское" class="accent-[#c5a880]">
+                <span>Шампанское</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Коньяк" class="accent-[#c5a880]">
+                <span>Коньяк</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Виски" class="accent-[#c5a880]">
+                <span>Виски</span>
+              </label>
+              <label class="flex items-center gap-3 cursor-pointer">
+                <input type="checkbox" name="drink[]" value="Водка" class="accent-[#c5a880]">
+                <span>Водка</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <div class="pt-4">
+          <button
+            type="submit"
+            class="w-full py-4 bg-[#50000a] border border-[#ff1a4d]/20 text-white font-serif tracking-widest uppercase rounded-xl hover:bg-[#70000e] active:scale-95 transition-all shadow-lg"
+            aria-label="Отправить анкету гостя"
+          >
+            Отправить!
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <!-- Финал -->
+    <footer class="text-center py-16">
+      <div class="font-script text-5xl md:text-7xl gold-text mb-4">Будем счастливы</div>
+      <div class="font-script text-5xl md:text-7xl gold-text">разделить этот вечер с вами</div>
+    </footer>
+
+  </div>
+
+  <!-- СКРИПТЫ -->
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Параллакс роз
+    const roses = gsap.utils.toArray('.rose-float');
+    roses.forEach((rose, i) => {
+      const speed = (i % 3 + 1) * 120;
+      const rotationDir = i % 2 === 0 ? 180 : -180;
+
+      gsap.to(rose, {
+        y: `-=${speed}`,
+        rotation: rotationDir,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1.5
+        }
+      });
+    });
+
+    // Логика формы: присутствие, доп. поля, пара
+    const attendanceRadios = document.querySelectorAll('input[name="attendance"]');
+    const optionalFields = document.getElementById('optional-fields');
+    const partnerField = document.getElementById('partner-field');
+    const partnerInput = partnerField ? partnerField.querySelector('input[name="partner_name"]') : null;
+
+    function clearOptionalFields() {
+      if (!optionalFields) return;
+
+      const textInputs = optionalFields.querySelectorAll('input[type="text"]');
+      textInputs.forEach(input => {
+        input.value = '';
+        input.removeAttribute('required');
+      });
+
+      const checkboxes = optionalFields.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(cb => cb.checked = false);
+    }
+
+    attendanceRadios.forEach(radio => {
+      radio.addEventListener('change', (e) => {
+        const value = e.target.value;
+
+        if (value === 'no') {
+          // Скрываем доп. поля
+          gsap.to(optionalFields, {
+            opacity: 0,
+            height: 0,
+            duration: 0.4,
+            ease: "power2.out",
+            onComplete: () => {
+              optionalFields.classList.add('hidden');
+              clearOptionalFields();
+              if (partnerField && partnerInput) {
+                partnerField.classList.remove('hidden');
+                partnerInput.removeAttribute('required');
+                partnerInput.value = '';
+              }
+            }
+          });
+        } else {
+          // Показываем блок optional-fields
+          optionalFields.classList.remove('hidden');
+          gsap.set(optionalFields, { height: "auto" });
+          const targetHeight = optionalFields.offsetHeight;
+          gsap.set(optionalFields, { height: 0 });
+
+          gsap.to(optionalFields, {
+            opacity: 1,
+            height: targetHeight,
+            duration: 0.5,
+            ease: "power2.out",
+            onComplete: () => {
+              gsap.set(optionalFields, { height: "auto" });
+            }
+          });
+
+          // Логика поля пары
+          if (partnerField && partnerInput) {
+            if (value === 'with_partner') {
+              partnerField.classList.remove('hidden');
+              partnerInput.setAttribute('required', 'required');
+            } else {
+              partnerField.classList.add('hidden');
+              partnerInput.value = '';
+              partnerInput.removeAttribute('required');
+            }
+          }
+        }
+      });
+    });
+
+    // ТАЙМЕР (Москва, UTC+3)
+    const weddingDateString = "2026-09-14T16:00:00+03:00";
+    const weddingDate = new Date(weddingDateString).getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown-container").innerHTML = `
+          <div class="font-serif text-2xl gold-text uppercase tracking-widest">
+            Этот день уже с нами, спасибо, что были рядом
+          </div>
+        `;
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText    = String(days).padStart(2, '0');
+      document.getElementById("hours").innerText   = String(hours).padStart(2, '0');
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, '0');
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+
+</body>
+</html>
